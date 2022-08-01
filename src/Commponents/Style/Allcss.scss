@@ -1,0 +1,79 @@
+@import "./Mixin.scss";
+@import "./Variable.scss";
+body {
+    font-size: 16px;
+    // font-family: $normal-font;
+    font-weight: $font-400;
+    color: $color;
+}
+ul, ol {
+    padding-left: 0;
+    margin-bottom: 0;
+    li {
+        list-style: none;
+    }
+}
+img {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    transition: $transition;
+    color: $color;
+    &:hover {
+        color: $btn-bg
+    }
+}
+h1,h2,h3,h4,h5,h6 {
+font-family: $bold-font;
+font-weight: 800;
+color: $primary-color;
+}
+.pd-section {
+    padding: 50px 0;
+}
+.cl-btn,
+.border-btn,
+.cl-btn-reverse  {
+    @include btn
+}
+.cl-btn-reverse {
+    background-color: $primary-color;
+    &:hover {
+        background-color: $btn-bg;
+    }
+}
+.border-btn {
+    background-color: transparent;
+    border: 1px solid $btn-bg
+}
+.cl-header {
+    .title {
+        margin-bottom: 15px;
+        font-size: 24px;
+        text-transform: uppercase;
+        span {
+            color: $btn-bg;
+        }
+    }
+    .sub-title {
+        font-size: 20px;
+        span {
+            color: $btn-bg;
+        }
+    }
+}
+.owl-theme .owl-dots .owl-dot.active span, 
+.owl-theme .owl-dots .owl-dot:hover span {
+    background-color: $btn-bg;
+}
+@media only screen and (max-width: 577px) {
+    .pd-section{
+        padding: 30px 0
+    }
+    .cl-header {
+        .title {
+            font-size: 20px;
+        }
+    }
+}

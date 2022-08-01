@@ -1,0 +1,30 @@
+@mixin shadow {
+    box-shadow: 0 1px 4px rgb(0 0 0 / 10%);
+    padding: 15px;
+    transition: $transition;
+    background-color: #fff;
+  &:hover {
+    box-shadow: 0 15px 10px rgb(0 0 0 / 10%);
+    transition: $transition;
+  }
+}
+@mixin unorder-list {
+  list-style-type: disclosure-closed;
+  padding-bottom: 10px;  
+}
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+@mixin btn {
+    background-color: $btn-bg;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    &:hover {
+        letter-spacing: 2px;
+        color: #fff;
+        background-color: $primary-color;
+}
+}

@@ -1,0 +1,126 @@
+@import "../../Style/Allcss.scss";
+.pf-section {
+    background: url(../../../../public/Images/pattern.png) no-repeat;
+    background-size: cover;
+    color: #333;
+    padding-top: 50px;
+    .row.ag {
+        align-items: center;
+    }
+    .right-content {
+        margin-bottom: -50px;
+    }
+    .paragraph {
+        .title {
+            color: #333;
+            font-size: 36px;
+            letter-spacing: 2px;
+            span {
+                color: $primary-color
+            }
+        }
+        p {
+            font-size: 26px;
+            margin-bottom: 0;
+        }
+    }
+//     .port-wrap {
+//         background-color: #cebbf8;
+//         width: calc(100% - 20px);
+//         height: calc(100% + -60px);
+//     padding-top: 7px;
+//     margin-bottom: 15px;
+//     border-radius: 4px;
+//         .port-container {
+//             width: calc(100% + 10px);
+//             margin-left: 8px;
+//             box-shadow: 0 1px 5px rgb(0 0 0 / 12%);
+//             img {
+//                 border-radius: 4px;
+//             }
+//         }
+//  }
+        .port-effect {
+            position: relative;
+            float: left;
+            overflow: hidden;
+            margin: 0;
+            width: 100%;
+            height: auto;
+            background: $primary-color;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            img {
+                position: relative;
+                display: block;
+                min-height: 100%;
+                max-width: 100%;
+                // opacity: .8;
+                -webkit-transition: -webkit-transform .35s;
+                transition: transform .35s;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                float: left;
+                border-radius: 4px;
+            }
+            figcaption {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                .title {
+                    font-size: 22px;
+                    color: #fff;
+                    padding: 30px;
+                    opacity: 0;
+                    width: 85%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            &:hover {
+                img {
+                    transform: translate3d(85%,0,0);
+                    opacity: .6;
+                }
+                .title {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .cl-col {
+        &:nth-child(even){
+           .port-effect {
+            background: $btn-bg;
+           }
+        }
+}
+@media only screen and (max-width: 992px) {
+    .pf-section {
+        .paragraph{
+            margin-bottom: 25px;
+            .title {
+                font-size: 32px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 576px) {
+    .pf-section {
+        padding-top: 30px;
+        .paragraph {
+            .title {
+                font-size: 24px;;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+}

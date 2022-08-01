@@ -1,0 +1,43 @@
+@import "../../Style/Allcss.scss";
+.video-section {
+    .cl-header {
+        p {
+            max-width: 700px;
+            margin: 0 auto 20px;
+        }
+    }
+    .video-wrap {
+        cursor: pointer;
+        background: #b4b2f3;
+        border-radius: 4px;
+        position: relative;
+        overflow: hidden;
+        .video-icon {
+            position: absolute;
+            color: #fff;
+            right: -5px;
+            bottom: -5px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            background-color: $primary-color;
+            border-radius: 4px;
+            text-align: center;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+@media only screen and (max-width: 992px) {
+    .video-section,
+    .pf-section {
+        .video-wrap,
+        .paragraph{
+            margin-bottom: 25px;
+            .title {
+                font-size: 32px;
+            }
+        }
+    }
+}

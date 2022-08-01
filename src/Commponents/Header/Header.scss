@@ -1,0 +1,121 @@
+@import "../Style/Allcss.scss";
+slider-wrap {position: relative;}
+.ml-auto {
+    margin-left: auto;
+    .nav-link {
+        font-weight: $font-600;
+        color: #575757;
+        &:hover {
+            color: $btn-bg;
+        }
+    }
+}
+.cl-navigation {
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    right:0;
+    .ml-auto {
+        margin-left: auto;
+        .nav-link {
+            font-weight: $font-600;
+            color: #575757;
+            &:hover {
+                color: $btn-bg;
+            }
+        }
+    }
+    .navbar-nav {
+        .dropdown-menu {
+            background-color: $primary-color;
+            padding: 0;
+            border: none;
+            .dropdown-item {
+                color: #fff;
+                &:hover {
+                    background-color: #3f82b5;
+                }
+            }
+        }
+    }
+}
+.sticky-nav {
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 1px 5px rgb(0 0 0 / 16%);
+    z-index: 9;
+}
+.social-icon {
+    li {
+        display: inline-block;
+        .icon {
+            width: 23px;
+            height: 23px;
+            line-height: 23px;
+            display: block;
+            // background-color: $btn-bg;
+            color: $primary-color;
+            text-align: center;
+            margin-right: 3px;
+            font-size: 14px;
+            border-radius: 3px;
+            &:hover {
+                color: #fff;
+                background-color: $btn-bg;
+            }
+        }
+    }
+    .nav-right{
+        @include flex;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .social-icon{
+        display: inline-block;
+    }
+    .cl-navigation {
+        .navbar-collapse {
+            flex-basis: auto;
+            .navbar-nav {
+                position: fixed;
+                left: 0;
+                width: 300px;
+                height: 100vh;
+                overflow-x: auto;
+                background-color: $primary-color;
+                top: 0;
+                z-index: 9;
+            }
+            .nav-link {
+                color: #fff;
+                padding: 5px 10px;
+            }
+        }
+        .navbar-toggler {
+            border: none;
+            padding: 0;
+            span {
+                display: none;
+            }
+            &:after {
+                content: "\f00d";
+                font-family: "FontAwesome";
+                color: $btn-bg;
+            }
+            &.collapsed {
+                span {
+                    display: inline-block;
+                }
+                &:after {
+                    display: none;
+                }
+            }
+            &:focus {
+                box-shadow: none;
+                border: none;
+                outline: none;
+            }
+        }
+    }
+}

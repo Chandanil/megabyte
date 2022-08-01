@@ -1,0 +1,18 @@
+@import "../Style/Allcss.scss";
+.modal-body {
+    .close {
+      font-size: 22px;
+      cursor: pointer;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      line-height: 20px;
+      background: $btn-bg;
+      text-align: center;
+      color: #fff;
+      right: -9px;
+      top: -15px;
+      border-radius: 100%;
+      padding: 5px;
+    }
+  }

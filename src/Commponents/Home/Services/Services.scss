@@ -1,0 +1,48 @@
+@import '../../Style/Allcss.scss';
+.service-section.pd-section {
+    padding-top: 0;
+}
+.service-wrap {
+    text-align: center;
+    padding: 15px;
+    .service-icon {
+        background-color: #cebbf8;
+        display: block;
+        width: 85px;
+        height: 85px;
+        border-radius: 30px 35px 7px 35px;
+        line-height: 85px;
+        text-align: center;
+        padding: 5px 10px 85px 5px;
+        margin: 0 auto 20px auto;
+        transition: $transition;
+        .icon {
+            background-color: #fff;
+            border-radius: 60px 25px 40px 7px;
+        }
+        img {
+            width: 50px;
+        }
+        &:hover {
+            border-radius: 7px 35px 30px 35px;
+            transition: $transition;
+        }
+    }
+    .title {
+        color: $primary-color;
+        font-size: 18px;
+        font-weight: $font-700;
+        &:hover {
+            color: $btn-bg;
+        }
+    }
+    &:hover {
+        @include shadow;
+        .service-icon {
+            border-radius: 7px 35px 30px 35px;
+        }
+        .title {
+            color: $btn-bg;
+        }
+    }
+}

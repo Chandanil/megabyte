@@ -1,0 +1,52 @@
+@import "../../Style/Allcss.scss";
+.fact-section {
+    .cl-col {
+        .fact-wrap {
+            @include shadow;
+            background-color: #fff;
+            color: #333;
+            text-align: center;
+            border-radius: 4px;
+            .icon-wrap {
+                border: 1px solid #ddd;
+                width: 65px;
+                height: 65px;
+                line-height: 65px;
+                margin: 0 auto 15px;
+            }
+            .icon {
+                width: 50px;
+                line-height: 50px;
+                height: 50px;
+                text-align: center;
+                background-color: $primary-color;
+                color: #fff;
+                font-size: 22px;
+                
+            }
+            .numb {
+                font-size: 28px;
+                margin-bottom: 10px;;
+            }
+        }
+        &:nth-child(even) {
+            margin-top: 30px;
+        }
+    }
+}
+@media only screen and (max-width: 577px){
+    .fact-section{
+        .cl-col
+        {
+            &:first-child {
+                margin-top: 0;
+            }
+            margin-top: 30px;
+            .fact-wrap {
+                .numb {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    } 
+}

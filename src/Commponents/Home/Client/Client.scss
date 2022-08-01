@@ -1,0 +1,37 @@
+@import "../../Style/Allcss.scss";
+.client-section {
+    background: url(../../../../public/Images/svg-background.png) no-repeat;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 90px;
+    background-position: center;
+    .d-flex {
+        justify-content: center;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+    .item {
+        .client-wrap {
+            width: 145px;
+            background: #fff;
+            padding: 5px;
+            border-radius: 3px;
+            margin: 8px;
+            img {
+                width: 135px;
+                height: 55px;
+                object-fit: contain;
+            }
+        }
+        &:first-child{
+            .client-wrap {
+                margin-left: 0;
+            }
+        }
+        &:last-child {
+            .client-wrap {
+                margin-right: 0;
+            }
+        }
+    }
+}

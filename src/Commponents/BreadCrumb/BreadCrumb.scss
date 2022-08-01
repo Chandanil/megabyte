@@ -1,0 +1,19 @@
+.custom-breadcrumb {
+    background: url('../../../public/Images/svg-background.png');
+    padding: 70px 0 50px 0;
+    background-position: top;
+    background-size: contain;
+    .title {
+        font-size: 38px;
+    }
+    li {
+        display: inline-block;
+        &.active {
+            color: #aca5a5;
+            i {
+                color: #333;
+                margin: 0 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@import '../../Style/Allcss.scss';
+.about-section {
+    background: url(../../../../public/Images/svg-background.png) no-repeat;
+    padding: 30px 0 50px 0;
+    transform: rotate(180deg);
+    background-position: bottom;
+    .container{
+        transform: rotate(-180deg)
+    }
+}
+.unorder-list {
+    li {
+        @include unorder-list;
+        @include flex;
+        list-style-type: none;
+        &:before {
+            content: "\f046";
+            font-family: 'FontAwesome';
+            color: $btn-bg;
+            margin-right: 15px;
+            font-size: 28px;
+        }
+        &:nth-child(even) {
+            &:before { 
+                color: $primary-color;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 991px) {
+    .about-section {
+        padding-top: 0;
+        padding-bottom: 30px;
+    }
+}
+@media only screen and (max-width: 577px) {
+    .why-us {
+        margin-top: 30px;
+    }
+}

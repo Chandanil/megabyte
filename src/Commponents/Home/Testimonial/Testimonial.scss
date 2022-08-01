@@ -1,0 +1,108 @@
+@import "../../Style/Allcss.scss";
+.testi-section.pd-section  {
+    padding-top: 70px;
+}
+.testimonialCarousel{
+    .owl-item{
+        .review-wrap {
+            position: relative;
+            .review-content-holder {
+                padding: 15px;
+                @include shadow; 
+                background-color: #fff;
+                margin: 10px;
+                padding-bottom: 40px;
+                &:hover {
+                    box-shadow:0 3px 20px rgb(0 0 0 / 10%)
+                }
+            }
+            .review-content {
+            padding: 15px;
+                border-radius: 4px;
+                position: relative;
+                background-color: #f9f9f9;
+                .title,.name {
+                    color: #857f7f;
+                }
+                .name {
+                    font-size: 18px;
+                }
+                &:after {
+                    content: "";
+                    border-top: 25px solid #f9f9f9;
+                    border-left: 25px solid transparent;
+                    border-bottom: none;
+                    border-right: 40px solid transparent;
+                    position: absolute;
+                    bottom: -14px;
+                    transform: rotate(-17deg);
+                    left: 6px;
+                }
+            }
+            .quote-icon {
+                font-size: 52px;
+                transform: scaleX(-1);
+                position: absolute;
+                top: 52px;
+                color: rgb(140 140 140 / 27%);
+                z-index: 1;
+                left: 10px;
+            }
+            .review-img {
+                position: absolute;
+                bottom: 10px;
+                right: 15px;    
+            img {
+                width: 55px;
+                height: 55px;
+                line-height: 55px;
+                border-radius: 100%;
+                opacity: 0.6;
+            }
+            }
+        }
+        &.center {
+            .review-wrap,
+            .review-img img {
+            opacity: 1;
+            }
+            .review-content{
+                background-color: #edf4e2;
+                color: #333;
+                opacity: 1;
+                &:after {
+                    border-top-color:  #edf4e2;
+                }
+                .title,.name {
+                    color: #575757;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 992px) {
+    .testi-section{
+        &.pd-section {
+            padding-top: 90px;
+        }        
+    }
+}
+@media only screen and (max-width: 576px) { 
+    .testi-section{
+        &.pd-section {
+            padding-top: 55px;
+            padding-bottom: 0;
+        }
+    }
+    .testimonialCarousel {
+        .owl-item {
+            .review-wrap {
+                .review-content {
+                    .title, .name{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

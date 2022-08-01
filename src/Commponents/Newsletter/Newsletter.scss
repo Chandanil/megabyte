@@ -1,0 +1,53 @@
+@import "../Style/Allcss.scss";
+.newsletter-form {
+    position: relative;
+}
+.newsl-form {
+    @include shadow;
+    max-width: 500px;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    border-radius: 3px;
+    top: -60px;
+    .cl-header {
+        .title {
+            margin-bottom: 3px
+        }
+    }
+    .form-group{
+        @include flex;
+        .form-control {
+            border-radius: 4px 0 0 4px;
+            &:focus {
+                box-shadow: none;
+            }
+        }
+        .cl-btn {
+            display: inline-flex;
+            align-items: center;
+            transition: $transition;
+            border: none;
+            border-radius: 0 4px 4px 0;
+        i {
+            margin-left: 10px;
+            transition:  $transition;
+        }
+        &:hover {
+            i {
+                color: $btn-bg;
+                transform: rotate(45deg);
+                transition:  $transition;
+            }
+        }
+        }
+    }
+}
+@media only screen and (max-width: 577px) {
+    .newsl-form {
+        left: 15px;
+        right: 15px;
+    }
+}

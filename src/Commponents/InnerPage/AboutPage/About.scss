@@ -1,0 +1,164 @@
+@import  "../../Style/Allcss.scss";
+.innerabout-section {
+    // background: url(../../../../public/Images/bg.png);
+    .intro {
+        padding-bottom: 30px;
+    }
+    .same-wrap{
+        margin-bottom: 25px;
+        @include flex;
+        align-items: unset;
+        .icon {
+            color: $btn-bg;
+            font-size: 62px;
+            opacity: .5;
+            margin-right: 10px;;
+        }
+    }
+   .techno-we-used {
+    margin-bottom: 50px;
+    .col-6 {
+        padding: 0
+    }
+    .techno-wrap {
+        background: #fff;
+        border: 1px solid #f3f2f2;
+        display: flex;
+        justify-content: center;
+        padding: 30px;
+        align-items: center;
+        min-height: 200px;
+        transition: $transition;
+            img {
+            max-width: 100px;
+            opacity: .7;
+        }
+        &:hover {
+            border-color: #e2e2e2;
+            background-color: #f9f9f9;
+            img {
+                opacity: 1;
+                transition: $transition;
+            }
+        }
+    }
+   }
+    .step-wrapper {
+        padding-bottom: 30px;
+        .img-wrap {
+            @include flex;
+            @include shadow;
+            justify-content: center;
+            width: 130px;
+            height: 130px;
+            line-height: 130px;
+            text-align: center;
+            background-color: #ecf7ff87;
+            border-radius: 100%;
+            position: relative;
+            &:before {
+                content: "";
+                border-radius: 100%;
+                position: absolute;
+                top: 0;
+                width: 0;
+                height: 0;
+                left: 0;
+                opacity: 0;
+                transition: $transition;
+                overflow: hidden;
+            }
+            &:hover {
+                &:before {
+                 opacity: 1;
+                 width: 100%;
+                 height: 100%;
+                 border: 2px solid $primary-color;
+                }
+             }
+        }
+        img {
+            max-width: 65px;
+        }
+        .rank {
+            background: $btn-bg;
+            padding: 1px 10px;
+            border-radius: 0 10px;
+            position: absolute;
+            color: #fff;
+            bottom: -10px;
+            line-height: initial;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            display: inline-table;
+        }
+        .title {
+            padding-top: 24px;
+            color: #575757;
+            font-size: 14px;
+        }
+        &:hover {
+           .img-wrap {
+            &:before {
+                opacity: 1;
+                width: 100%;
+                height: 100%;
+                border: 2px solid $primary-color;
+            }
+           }
+            .rank {
+                background-color: $primary-color;
+            }
+            .title {
+                color: $btn-bg;
+            }
+        }
+    }
+}
+.teamCarousel {
+    padding-bottom: 30px;
+    .team-wrap {
+        position: relative;
+        padding-bottom: 30px;
+        .img-wrap {
+            @include shadow;
+            background: #fdfffa;
+            img {
+                height: 250px;
+                object-fit: contain;
+            }
+        }
+        .content {
+            position: absolute;
+            @include shadow;
+            background: #fff;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            text-align: center;
+            width: calc(100% - 30px);
+            padding: 5px;
+            .name {
+                margin-bottom: 0;
+            }
+            span {
+                font-style: italic;
+                font-size: 14px;
+            }
+        }
+        &:hover {
+            .content {
+                box-shadow: 0 6px 0px rgb(145 192 62);
+            }
+        }
+    }
+}
+@media only screen and (max-width: 991px) {
+    .innerabout-section {
+        .techno-wrap {
+            min-height: 150px;
+        }
+    }
+}
