@@ -1,5 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel';
 import "./Banner.scss";
+import React from 'react'; 
 export const Banner = () => {
     return (
          <div className="clBanner">

@@ -3,6 +3,7 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import "./Client.scss";
 import { Link } from 'react-router-dom';
+import React, { Component }  from 'react';
 export const Client= ()=> {
     const clientCarousel = {
         items: 1,

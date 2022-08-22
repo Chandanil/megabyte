@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./About.scss";
+import React from 'react'; 
 export const About= () => {
     return (
         <div className="about-section">

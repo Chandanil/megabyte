@@ -4,6 +4,7 @@ import './About.scss';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ReactOwlCarousel from "react-owl-carousel";
+import React from 'react'; 
 export const About = () => {
     const team = {
         nav: false,
@@ -25,7 +26,7 @@ export const About = () => {
     
     return (
         <>
-            <BreadCrumb />
+            <BreadCrumb first="Home" second="About"/>
             <div className="innerabout-section pd-section">
                 <Container>
                     <div className="intro">
@@ -198,6 +199,9 @@ export const About = () => {
                        </Row>
                     </div>
                     <div className="our-team">
+                        <div className="cl-header text-center">
+                            <h2 className="sub-title">Meet Our <span>Team</span></h2>
+                        </div>
                         <ReactOwlCarousel className='owl-theme teamCarousel' loop margin={10}  {...team}>
                             <div class='item'>
                                 <div className="team-wrap">

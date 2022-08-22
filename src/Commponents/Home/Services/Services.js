@@ -1,5 +1,6 @@
 import './Services.scss';
 import {Link} from 'react-router-dom';
+import React from 'react'; 
 export const Services = () => {
     return (
         <div className="service-section pd-section">

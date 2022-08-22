@@ -1,4 +1,5 @@
 import "./Fact.scss";
+import React from 'react'; 
 export const Fact= () => {
     return (
         <div className="fact-section">

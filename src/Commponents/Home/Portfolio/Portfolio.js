@@ -1,5 +1,6 @@
 import './Portfolio.scss';
 import {Link} from 'react-router-dom';
+import React from 'react'; 
 export const Portfolio = () => {
     return (
         <div className="pf-section pd-section">

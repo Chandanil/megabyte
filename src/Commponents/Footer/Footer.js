@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import "./Footer.scss";
+import React from 'react'; 
 export const Footer = () => {
     return(
         <div className="site-footer">

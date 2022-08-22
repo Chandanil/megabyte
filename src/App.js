@@ -8,7 +8,10 @@ import { Newsletter } from "./Commponents/Newsletter/Newsletter";
 import { Home } from "./Commponents/Home/Home";
 import { Breadcrumb } from "./Commponents/BreadCrumb/BreadCrumb";
 import { About } from "./Commponents/InnerPage/AboutPage/About";
+import axios from "axios";
+import React, { Component }  from 'react';
 function App() {
+  axios.defaults.baseURL = "http://sub.xinzatech.com/";
   return (
     <div className="App">
       <BrowserRouter>

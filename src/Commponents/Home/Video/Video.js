@@ -1,5 +1,5 @@
 import { Popup } from "../../Popup/Popup";
-import { useState } from "react";
+import React,{ useState } from "react";
 import "./Video.scss";
 import { Fact } from "../Fact/Fact";
 export const Video = (props)=> {

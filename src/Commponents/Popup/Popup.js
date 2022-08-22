@@ -1,5 +1,6 @@
 import './Popup.scss';
 import Modal from 'react-awesome-modal';
+import React from 'react'; 
 export const Popup = (props) => {
     return (
         <div className='popup'>
